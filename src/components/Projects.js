@@ -10,8 +10,9 @@ import { Project } from '../Data/data';
 export default function Projects() {
   return (
     <div>
-      <div className="container mt-5 py-3"style={{width:"1600px", 
-        maxWidth:"1600px",
+      <div className="container mt-5 py-3"style={{
+        width:"75vw", 
+            maxWidth:"950px",
         transform: "skew(-3deg)",
         boxShadow:"0px 0px 15px 10px #19A7CE" ,
         zIndex:"10",
@@ -30,16 +31,15 @@ export default function Projects() {
         </div>
         <div className="row">
             {Project.map((item)=>{
-              
-              return (
+          return (
             <div className="col d-flex flex-row align-items-center justify-content-center px-2">
-              <div class="card text-center p-2" 
-              style={{width:"250px", height:"300px", marginBottom:"30px",
+              <div class="card text-center py-3" 
+              style={{width:"200px", height:"270px", marginBottom:"20px",
               }} key={item.id}>
-                <img class="card-img-top" style={{width:"150px", height:"100px",margin:"auto",borderRadius:"50%"}} src={item.img} alt="Card image cap"/>
+                <img class="card-img-top" style={{width:"150px", height:"100px",margin:"auto",borderRadius:"50%"}} src={item.img} alt={item.name}/>
                 <div class="card-body">
-                  <h5 class="card-title">{item.name}</h5>
-                  <a href={item.gitLink} class="btn btn-secondary text-capitalize fw-bold">view project</a>
+                  <p class="card-title">{item.name}</p>
+                  <a href={item.gitLink} class="btn btn-secondary text-capitalize fw-bold btn-sm">view project</a>
                 </div>
             </div>
                       </div>

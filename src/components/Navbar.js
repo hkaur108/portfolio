@@ -14,7 +14,7 @@ export default function Navbar() {
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto justify-content-around" style={{width:"100%", fontSize:"1.50rem"}}>
+    <ul class="navbar-nav mr-auto justify-content-around" style={{width:"100%", fontSize:"1rem"}}>
       <li class="nav-item">
         <NavLink to="/" className= {({isActive})=>
                     (isActive ? "nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")

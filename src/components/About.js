@@ -11,10 +11,9 @@ import '../App.css';
 export default function About() {
   return (
     <div>
-      <div className="container mt-5 py-3"
-      style={{width:"1200px", 
-            maxWidth:"1170px",
-        height:"800px", 
+      <div className="container mt-4 py-2"
+      style={{width:"75vw", 
+            maxWidth:"950px",
         transform: "skew(-5.5deg)",
         boxShadow:"0px 0px 15px 10px #19A7CE" ,
         backgroundColor:"#2D2727",
@@ -26,14 +25,14 @@ export default function About() {
             <Navbar/>
           </div>
         </div>
-        <div className="row my-1">
+        <div className="row ">
           <div className="col">
-            <h3 className='text-center fs-1' style={{color:"#19A7CE"}}>About</h3>
+            <h3 className='text-center' style={{color:"#19A7CE"}}>About</h3>
           </div>
         </div>
        
-        <div className="row w-100 h-100 ">
-            <div className="col-8 py-2 px-5 " > 
+        <div className="row ">
+            <div className="col  px-5 " > 
               <ul className='list-group aboutlistContainer' style={{backgroundColor:"#2D2727", color:"#fff"}}>
                 <li class="list-group-item" style={{backgroundColor:"#2D2727", color:"#fff",  border:"none"}}>
                   <p>  <span className='me-2'><SchoolIcon/></span>I have a degree in Bachelors in Computer Application from Delhi, India. and also have a Post graduation diploma in Cyber Security and computer Forensics from Lambton College in Mississauga.</p></li>
@@ -43,15 +42,9 @@ export default function About() {
                   </li>
                   <li class="list-group-item" style={{backgroundColor:"#2D2727", color:"#fff",  border:"none"}}>
                 
-                  <p>   <span className='me-2'><LibraryBooksIcon/></span>My hobbies are reading books and playing chess.</p></li>
-                  <li class="list-group-item" style={{backgroundColor:"#2D2727", color:"#fff",  border:"none"}}>
-                  
-                  <p> <span className='me-2'><TipsAndUpdatesIcon/></span>I believe in team work and helping colleagues wherever possible to achieve the team goal. </p></li>
-
-
+                  <p> <span className='me-2'><LibraryBooksIcon/></span>My hobbies are reading books and playing chess.</p></li>
               </ul>
               </div>
-            <div className="col-4 align-self-start"> <img src="/Images/profileImage/1211.jpg" alt="profile Image" style={{width:"300px", borderRadius:"50%", boxShadow:"0px 0px 4px 10px #19A7CE"}} /></div>
         </div>
       </div>
     </div>
