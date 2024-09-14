@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root{
+  --mainBackground:#240A34;
+  --mainColor:#EEEEEE;
+
+}
+
+body{
+  width:100vw;
+  height:100vh;
+  background: linear-gradient(180deg in oklab, #000000, #19A7CE);
+  color:var(--mainColor)!important;
+}
+.aboutlistContainer>li>p{
+  transition: transform 1s;
+  
+}
+.aboutlistContainer>li>p:hover{
+  color:#19A7CE;
+  transform: scaleX(1.05);
+
+}
+
+h4{
+    transition: transform 1s;
+
+}
+h4:hover{
+   color:#19A7CE;
+  transform: scaleX(1.05);
+
+}
+
+.card{
+  transition: transform 0.5s;
+  
+}
+
+.card:hover{
+    transform: scaleY(1.10);
+    cursor: pointer;
+
+
+}
+
