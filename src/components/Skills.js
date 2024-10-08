@@ -50,7 +50,7 @@ export default function Skills() {
             <h6 className=' text-center'>React</h6> 
           </div>
           <div className="col-4 ">
-            <h6 className=' text-center'>TypeScript</h6>   
+            <h6 className=' text-center'>Unix</h6>   
           </div>
         </div>
         <div className="row">
@@ -58,7 +58,7 @@ export default function Skills() {
               <h6 className=' text-center'>JQuery</h6>   
           </div>
           <div className="col-4">
-              <h6 className=' text-center'>Git</h6>   
+              <h6 className=' text-center'>Git Bash</h6>   
           </div>
            <div className="col-4">
               <h6 className=' text-center'>Linux</h6>   

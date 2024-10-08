@@ -40,7 +40,7 @@ export default function Contact() {
             <div className="row">
               <div className="col">
                  <h6 className='text-center' style={{color:"#19A7CE"}}>
-                 <span className='text-light'>LinkedIn:</span> <a href="www.linkedin.com/in/harpreet-kaur-7544a0300">www.linkedin.com/in/harpreet-kaur-7544a0300</a>
+                 <span className='text-light'>LinkedIn:</span> <a href="www.linkedin.com/in/harpreet-kaur-7544a0300">www.linkedin.com/in/harpreet-kaur108</a>
                 </h6>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function Contact() {
                 <a href="mailto:hkaur108@hotmail.com"><button type="button"  href="mailto:hkaur108@hotmail.com" className='btn btn-sm btn-outline-secondary fw-bold' style={{color:"#19A7CE"}}>Email</button></a>
             </div>
             <div className="col-4 d-flex align-items-center justify-content-center">
-              <a href="https://www.linkedin.com/in/harpreet-kaur-7544a0300/"><button type="button" href="www.linkedin.com/in/harpreet-kaur-7544a0300"  className='btn btn-sm btn-outline-secondary fw-bold' style={{color:"#19A7CE"}}>LinkedIn</button></a>
+              <a href="https://www.linkedin.com/in/harpreet-kaur-7544a0300/"><button type="button" href="www.linkedin.com/in/harpreet-kaur108"  className='btn btn-sm btn-outline-secondary fw-bold' style={{color:"#19A7CE"}}>LinkedIn</button></a>
             </div>
             <div className="col-4 d-flex align-items-center justify-content-center">
               <a href="https://github.com/hkaur108?tab=repositories">
