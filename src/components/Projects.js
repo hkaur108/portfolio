@@ -4,18 +4,55 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import '../App.css';
 import { Project } from '../Data/data';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+
+
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 1400, min: 1200 },
+    items: 4
+  },
+  desktop: {
+    breakpoint: { max: 1200, min: 900 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 900, min: 500 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 500, min: 0 },
+    items: 1
+  }
+};
+
+
+
 export default function Projects() {
+
+
+  
+  
+  const EachProject= Project.map((item)=>{
+        return(      
+            <Card key={item.id} style={{ width: '12em', height:"20em" }} className='p-3 mx-auto mx-1'>
+                  <Card.Img style={{ width: '7em' }}   variant="top" src={item.img} className='formatProjImg mt-1 mx-auto' alt={item.name}/>
+            <Card.Body className='d-flex align-items-center justify-content-between flex-column'>
+            <Card.Title className='fs-6 fw-bold'>{item.name}</Card.Title>
+            <Button className='text-capitalize text-center text-wrap fs-6 ' size="sm" variant="primary" href={item.gitLink}>view project</Button>
+        </Card.Body>
+        </Card>
+        
+        )
+    })
   return (
     <div>
-      <div className="container mt-5 py-3"style={{
-        width:"75vw", 
-            maxWidth:"1200px",
-        transform: "skew(-3deg)",
-        boxShadow:"0px 0px 15px 10px #19A7CE" ,
-        zIndex:"10",
-        borderRadius:"25px",
-        backgroundColor:"#2D2727",
-        color:"#fff",}}>
+      <div className="container mt-5">
           <div className="row">
             <div className="col">
               <Navbar/>
@@ -23,25 +60,22 @@ export default function Projects() {
           </div>
         <div className="row p-2">
         <div className="col">
-          <h3 className='text-center fs-1' style={{color:"#19A7CE"}}>Projects</h3>
+          <h4 className='text-center fs-1'>Projects</h4>
         </div>
         </div>
         <div className="row">
-            {Project.map((item)=>{
-          return (
-            <div className="col d-flex col-lg-3 flex-row align-items-center justify-content-center px-2">
-              <div class="card text-center py-3" 
-              style={{width:"200px", height:"270px", marginBottom:"20px",
-              }} key={item.id}>
-                <img src={item.img} class="card-img-top" style={{width:"150px", height:"100px",margin:"auto",borderRadius:"50%"}} src={item.img} alt={item.name}/>
-                <div class="card-body">
-                  <p class="card-title fst-italic text-secondary fw-bold">{item.name}</p>
-                  <a href={item.gitLink} class="btn btn-secondary text-capitalize fw-bold btn-sm">view project</a>
-                </div>
-            </div>
-                      </div>
+          <div className='container mb-5' id='projects'>
+      
+        <div className="row">
+          <div className="col text-center">
+          <Carousel responsive={responsive}>
+            {EachProject}     
+        </Carousel>
+          </div>
+        </div>
+        
+      </div>
 
-            )})}
         </div>
       </div>
     </div>

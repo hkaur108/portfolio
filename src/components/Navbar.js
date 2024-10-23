@@ -3,36 +3,66 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import '../App.css';
 import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+
+
+
 
 export default function Navbar() {
   const [isActive,setisActive] =useState(false)
+  const[showNav,setshowNav]= useState(false)
+
+  useEffect(()=>{
+    const collapseButton= document.querySelector(".clicked");
+    const navbarNav= document.getElementById('navbarNav')
+
+  collapseButton.addEventListener("click", ()=>{
+    if(!showNav){
+        navbarNav.style.display="block";
+        navbarNav.style.transition='all 2s ease-in';
+        setshowNav(true)
+    }
+    else{
+      setshowNav(false)
+      navbarNav.style.display="none"
+
+    }
+    
+  })
+  
+
+  },[showNav])
+
+
 
   return (
-    <div className='container' >
-        <nav class="navbar navbar-expand-lg text-light" >
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <div className='container' id="navContainer">
+        <nav className="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-light" >
+            <a className="navbar-brand text-light" href="#"><strong>🐱 PortFolio</strong></a>
+
+  <button className="navbar-toggler btn-light clicked" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon text-light"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto justify-content-around" style={{width:"100%", fontSize:"1rem"}}>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto ">
       <li class="nav-item">
         <NavLink to="/" className= {({isActive})=>
                     (isActive ? "nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")
      
-        }>Home</NavLink>
+        }>🏠 Home</NavLink>
       </li>
       <li class="nav-item">
         <NavLink 
-        className= {({isActive})=>(isActive?"nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")} to="/about">About</NavLink>
+        className= {({isActive})=>(isActive?"nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")} to="/about">ℹ️ About</NavLink>
       </li>
       <li class="nav-item">
-        <NavLink  className= {({isActive})=>(isActive?"nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")} to="/skills">Skills</NavLink>
+        <NavLink  className= {({isActive})=>(isActive?"nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")} to="/skills">🛠️ Skills</NavLink>
       </li>
         <li class="nav-item">
-        <NavLink  className= {({isActive})=>(isActive?"nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")}  to="/Projects">Projects</NavLink>
+        <NavLink  className= {({isActive})=>(isActive?"nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")}  to="/Projects">🗃️ Projects</NavLink>
       </li>
         <li class="nav-item" >
-        <NavLink  className= {({isActive})=>(isActive?"nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")}  to="/Contact">Contact</NavLink>
+        <NavLink  className= {({isActive})=>(isActive?"nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")}  to="/Contact">📧 Contact</NavLink>
       </li>
     </ul>
     

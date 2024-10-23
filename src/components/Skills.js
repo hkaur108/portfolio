@@ -8,17 +8,7 @@ import '../App.css';
 export default function Skills() {
   return (
     <div>
-      <div className="container mt-4 "
-      style={{width:"75vw", 
-            maxWidth:"950px",
-        transform: "skew(-6deg)",
-        boxShadow:"0px 0px 15px 10px #19A7CE" ,
-
-        zIndex:"10",
-        borderRadius:"25px",
-        backgroundColor:"#2D2727",
-        color:"#fff",
-        }}>
+      <div className="container mt-5 mx-auto border border-light" id='skillsContainer'>
         
         <div className="row">
           <div className="col">
@@ -27,62 +17,63 @@ export default function Skills() {
         </div>
         <div className="row">
           <div className="col">
-            <h4 className='text-center' style={{color:"#19A7CE"}}>Skills</h4>
+            <h2 className='text-center'>Skills</h2>
           </div>
         </div>
-        <div className="row">
-          <div className="col-4 ">
-            <h6 className=' text-center'>HTML5</h6>
+        <div className="row text-center mx-auto">
+          <div className="col-lg-4 col-md-3 col-sm-12 ">
+          <strong>HTML5</strong>
+          </div> 
+          <div className="col-lg-4 col-md-3 col-sm-12">
+            <strong>CSS3</strong>
           </div>
-          <div className="col-4 ">
-            <h6 className=' text-center'>CSS3</h6> 
-          </div>
-          <div className="col-4 ">
-            <h6 className=' text-center'>Javascript</h6>   
+          <div className="col-lg-4 col-md-3 col-sm-12">
+            <strong>Javascript</strong>
           </div>
         </div>
         
-        <div className="row">
-          <div className="col-4">
-            <h6 className=' text-center'>Bootstrap</h6>
+        <div className="row text-center mx-auto">
+          <div className="col-lg-4 col-md-3 col-sm-12">
+            <strong>Bootstrap</strong>
           </div>
-          <div className="col-4 ">
-            <h6 className=' text-center'>React</h6> 
+          <div className="col-lg-4 col-md-3 col-sm-12">
+            <strong>React</strong>
           </div>
-          <div className="col-4 ">
-            <h6 className=' text-center'>Unix</h6>   
+          <div className="col-lg-4 col-md-3 col-sm-12">
+            <strong>RWD</strong>
           </div>
         </div>
+        <div className="row text-center mx-auto">
+          <div className="col-lg-4 col-md-3 col-sm-12">
+            <strong>JQuery</strong>
+          </div>
+          <div className="col-lg-4 col-md-3 col-sm-12">
+            <strong>Git</strong>
+          </div>
+           <div className="col-lg-4 col-md-3 col-sm-12">
+            <strong>SVG</strong>
+          </div>
+        </div>
+  
         <div className="row">
-          <div className="col-4">
-              <h6 className=' text-center'>JQuery</h6>   
-          </div>
-          <div className="col-4">
-              <h6 className=' text-center'>Git Bash</h6>   
-          </div>
-           <div className="col-4">
-              <h6 className=' text-center'>Linux</h6>   
+          <div className="col">
+            <h6 className='text-center' style={{color:"#19A7CE"}}>📜 Professional Development</h6>
           </div>
         </div>
         <div className="row ">
           <div className="col">
-            <p className='text-center py-1' style={{fontSize:"0.2rem"}}>Currently Learning Nodejs, Express and Mongoose, to get backend development knowledge.</p> 
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <h6 className='text-center' style={{color:"#19A7CE"}}>Professional Development</h6>
-          </div>
-        </div>
-        <div className="row ">
-          <div className="col">
-            <p className="mx-3 fw-bold">I have used the following resources to gain technical skills.</p>
-            <ul className='justify-self-center' style={{fontSize:"0.1rem"}}>
-              <li>The Complete 2024 Web Development Bootcamp from Udemy</li>
-              <li>100 Days of Code: The Complete Python Pro Bootcamp from Udemy</li>
-              <li>React JS Frontend Web Development for Beginners from Udemy</li>
-              <li>Python Masterclass: Learn By Building 15 Projects & ChatGPT from Udemy</li>
-            </ul>
+            <div className="col">
+              <p>The Complete 2024 Web Development Bootcamp -- Udemy</p>
+            </div>
+            <div className="col">
+              <p>React JS Frontend Web Development for Beginners -- Udemy</p>
+            </div>
+            <div className="col">
+              <p>Resposive Web Design -- FreeCodeCamp</p>
+            </div>
+            <div className="col2">
+              <p>Creating Responsive Web Design -- Linkedln</p>
+            </div>
           </div>
         </div>
       </div>

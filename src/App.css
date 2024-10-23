@@ -15,28 +15,78 @@
 
 :root{
   --mainBackground:#240A34;
-  --mainColor:#EEEEEE;
+  --mainColor:#F7F7F7;
+  --paraGraphColor:rgba(108,117,125,1)
 
 }
+
+
 
 html,body{
-  width:100%;
-  height:100%;
-  background: linear-gradient(180deg in oklab, #000000, #19A7CE);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  width:80%;
+  max-width:80%;
+  font-family:sans-serif;
+  margin:auto;
+  background-color: var(--mainBackground);
   color:var(--mainColor)!important;
-  background-attachment: fixed;
-}
-.aboutlistContainer>li>p{
-  transition: transform 1s;
-  
-}
-.aboutlistContainer>li>p:hover{
-  color:#19A7CE;
-  transform: scaleX(1.05);
+  font-size: 16px;
 
+}
+
+
+/* Global Stylings */
+h1,h2,h3,h4,h5,h6{
+  color:var(--mainColor);
+  letter-spacing: 0.05em;
+}
+
+h1{
+  font-size: 2em;
+
+}
+
+h2{
+    font-size: 1.8em;
+
+
+}
+
+h3{
+
+      font-size: 1.5em;
+
+
+}
+
+h4{
+
+        font-size: 1.3em;
+        
+
+
+}
+
+h5{
+          font-size: 1.2em;
+
+
+}
+
+h6{
+          font-size: 1em;
+
+
+}
+
+p{
+  font-size: 1em;
+  letter-spacing: 0.04em;
+  color:var(--paraGraphColor);
+}
+
+
+ul, li{
+  font-size: 1em;
 }
 
 h6{
@@ -44,20 +94,432 @@ h6{
 
 }
 h6:hover{
-   color:#19A7CE;
   transform: scaleX(1.05);
 
 }
 
+span{
+  color:#fff;
+}
+
+#imageContainer{
+                width:70%;
+                height:90%;
+                margin:auto;
+                background-image: url("/public/Images/profileImage/pro.jpg");
+                background-position: center;
+                background-color: var(--mainBackground);
+                background-size:100%;
+                background-repeat:no-repeat;
+                border-radius:5%;
+                box-shadow:0px 0px 5px 5px #6c6d6d;
+                overflow:hidden;
+}
+
 .card{
   transition: transform 0.5s;
-  
+
 }
 
 .card:hover{
-    transform: scaleY(1.10);
+    transform: scaleY(1.06);
     cursor: pointer;
+    box-shadow: 0px 0px 5px 10px var(#000);
 
 
 }
+
+
+@media only screen and (min-width: 1200px){
+
+/*===================== Navbar====================== */
+
+
+#navContainer{
+  margin:auto;
+  text-align: center;
+}
+
+#navContainer nav.navbar a.navbar-brand{
+    display:none!important;
+    color: #19a7ce !important;
+    font-size: 1.5em;
+  }
+
+  #navContainer > button{
+    background-color: #fff;
+    border:none;
+  }
+
+    #navContainer > button > span.navbar-toggler-icon{
+      color: #19a7ce !important;
+      border: #19a7ce !important;
+      outline: #19A7CE!important;
+    }
+
+    #navContainer button:hover{
+      border:none;
+      outline:none;
+    }
+  #navContainer ul{
+    text-align: center;
+    overflow: hidden;
+
+  }
+ #navContainer ul li.nav-item{
+  width:100%;
+    padding:0 0;
+    margin:0 0;
+    text-align: center;
+    overflow: hidden;
+
+  }
+
+   #navContainer ul li a strong{
+
+   }
+  #navContainer ul li:hover{
+    /* transform: scale(0.5)!important; */
+    transition:all .5s ease;
+  }
+
+
+
+
+}
+
+@media only screen and (min-width: 992px) {
+    #homeContainer #homePage h3{
+    font-size: 2.8em;
+  }
+
+   #homeContainer #homePage .jumbotron .container p{
+    font-size: 1em;
+   }
+/*===================== Navbar====================== */
+
+
+#navContainer{
+  width:100%;
+  margin:auto;
+    text-align: center;
+}
+
+#navContainer nav.navbar a.navbar-brand{
+    display:none!important;
+    color: #19a7ce !important;
+    font-size: 1.5em;
+  }
+
+    #navContainer button:hover{
+      border:none;
+      outline:none;
+    }
+  #navContainer ul{
+    width:100%;
+    text-align: center;
+    overflow: hidden;
+
+
+  }
+ #navContainer ul li{
+    display:block;
+    text-align: center;
+    overflow: hidden;
+
+
+  }
+
+  #navContainer ul li:hover{
+    transform: scale(1.1)!important;
+    transition:all .5s ease;
+  }
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+  #homeContainer{
+    width:100%;
+    text-align: center;
+    margin: 2em auto;
+
+  }
+
+/*===================== Navbar====================== */
+
+
+#navContainer{
+  width:100%;
+  margin:auto;
+  text-align: center;
+}
+
+#navContainer nav.navbar a.navbar-brand{
+  display:none!important;
+    color: #19a7ce !important;
+    font-size: 1.5em;
+  }
+
+  #navContainer > button{
+    background-color: #fff;
+    border:none;
+  }
+
+
+    #navContainer button:hover{
+      border:none;
+      outline:none;
+    }
+  #navContainer ul{
+    width:100%;
+    margin:1em auto;
+    text-align: center;
+    overflow: hidden;
+
+  }
+ #navContainer ul li{
+    display:block;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #navContainer ul li:hover{
+    transform: scale(1.1)!important;
+    transition:all .5s ease;
+  }
+
+  #homePageDesc{
+      display: grid, !important;
+      order:3!important;
+  }
+
+   #imageContainer{
+    display: grid!important;
+    order:1!important;
+   }
+
+     #homePageDesc{
+      display: grid, !important;
+      order:3!important;
+
+   }
+
+    .icons{
+    order:2 !important;
+    margin:auto;
+   }
+
+   .icons a{
+    margin: auto !important;
+   }
+
+
+     #skillsContainer .row div.col-lg-4 strong{
+    display:block;
+    padding:.3em 0;
+    margin:.5em auto;
+  }
+
+
+
+
+
+}
+
+
+@media screen and (min-width: 600px)  {
+  #homeContainer #homePage h3{
+    font-size: 2.8em;
+  }
+    #homeContainer #homePage h3 span span{
+      font-size: 1.5em;
+    }
+
+   #homeContainer #homePage .jumbotron .container p{
+    font-size: 1em;
+   }
+/*===================== Navbar====================== */
+
+
+#navContainer nav.navbar a.navbar-brand{
+    display: none !important;;
+    color: #19a7ce !important;
+    font-size: 1em;
+  }
+
+  #navContainer > button{
+    background-color: #fff;
+    border:none;
+  }
+
+
+    #navContainer button:hover{
+      border:none;
+      outline:none;
+    }
+  #navContainer ul{
+    width:100%;
+    /* margin:1em 0; */
+    text-align: center;
+    overflow: hidden;
+  }
+ #navContainer ul li{
+    display:block;
+    text-align: center;
+    overflow: hidden;
+
+  }
+  #navContainer ul li:hover{
+    transform: scale(1.1)!important;
+    transition:all .5s ease;
+
+
+  }
+     #homePageDesc{
+      display: grid, !important;
+      order:3!important;  
+
+   }
+
+   #imageContainer{
+    width:15em;
+    height:12em;
+   }
+
+    .icons{
+    order:2 !important;
+    margin:auto;
+   }
+
+   .icons a{
+    margin: auto !important;
+   }
+
+     /*======================== skills=========================== */
+
+
+  #skillsContainer .row div.col-lg-4 strong{
+    display:block;
+    padding:.3em 0;
+    margin:.5em auto;
+  }
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 600px){
+
+
+
+  /*============== Home Container=================== */
+  #homeContainer{
+    max-width:100%;
+    text-align: center;
+    margin:auto;
+  }
+
+
+.navbar-toggler{
+  background-color: #fff!important;
+  font-size: 1em;
+}
+    #homePageDesc{
+      order:3!important;
+
+   }
+
+
+    .icons{
+    order:2 !important;
+    margin:auto;
+   }
+
+   .icons a{
+    margin: auto !important;
+   }
+
+
+   #imageContainer{
+    order:1!important;
+   }
+/*===================== Navbar====================== */
+
+#navContainer .navbar >button >span{
+  color:#fff!important;
+
+}
+
+#navContainer nav.navbar a.navbar-brand{
+    display:block;
+    color: #19a7ce !important;
+    font-size: 1.5em;
+    padding:.5em 1em;
+    /* margin:.2em auto; */
+    /* border-bottom: none!important; */
+
+  }
+
+  #navContainer > button{
+    border:none;
+  }
+
+    #navContainer > button > span{
+
+      background-color: #fff;
+    }
+
+    #navContainer button:hover{
+      border:none;
+      outline:none;
+    }
+  #navContainer ul{
+    margin:1em 0;
+    text-align: center;
+    overflow: hidden;
+    display:block;
+    padding:1em .5em;
+    transition:all .5s ease;
+
+  }
+ #navContainer ul li{
+    padding:.5em;
+    margin:0 0;
+    border-bottom: 1px solid rgba(151, 148, 148, 0.733)!important;
+    text-align: center;
+    overflow: hidden;
+    transition:all .5s ease;
+
+  }
+  #navContainer ul li:hover{
+    transform: scale(1.1)!important;
+    transition:all .5s ease;
+  }
+
+  /* about Container */
+  #imageContainer{
+    width:15em;
+    height:15em;
+  }
+
+
+  /*======================== skills=========================== */
+  #skillsContainer .row div.col-lg-4 strong{
+    display:block;
+    padding:.3em 0;
+    margin:.5em auto;
+    border-bottom: 1px solid grey;
+  }
+
+
+}
+
+
 

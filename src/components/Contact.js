@@ -8,17 +8,7 @@ import '../App.css';
 export default function Contact() {
   return (
     
-        <div className="container mt-5 py-3" 
-        style={{
-          width:"75vw", 
-            maxWidth:"950px",
-                  transform: "skew(-6deg)",
-        boxShadow:"0px 0px 15px 10px #19A7CE" ,
-        zIndex:"10",
-        borderRadius:"25px",
-        backgroundColor:"#2D2727",
-        color:"#fff",
-        }}>
+        <div className="container mt-5">
 
             <div className="row">
                 <div className="col">
