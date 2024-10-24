@@ -8,7 +8,7 @@ import '../App.css';
 export default function Skills() {
   return (
     <div>
-      <div className="container mt-5 mx-auto border border-light" id='skillsContainer'>
+      <div className="container mt-5 mx-auto" id='skillsContainer'>
         
         <div className="row">
           <div className="col">

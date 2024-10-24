@@ -10,7 +10,7 @@ import "../App.css";
 
 export default function Home() {
   return (
-        <div className="container border border-warning" id="homeContainer">
+        <div className="container" id="homeContainer">
             <div className="row">
                 <div className="col">
                     <Navbar/>    
