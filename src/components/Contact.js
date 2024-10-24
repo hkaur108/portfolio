@@ -30,7 +30,7 @@ export default function Contact() {
             <div className="row">
               <div className="col">
                  <h6 className='text-center' style={{color:"#19A7CE"}}>
-                 <span className='text-light'>LinkedIn:</span> <a href="www.linkedin.com/in/harpreet-kaur-7544a0300">www.linkedin.com/in/harpreet-kaur108</a>
+                 <span className='text-light'>LinkedIn:</span> <a href="https://www.linkedin.com/in/harpreet-kaur-7544a0300/">www.linkedin.com/in/harpreet-kaur108</a>
                 </h6>
               </div>
             </div>

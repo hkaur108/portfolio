@@ -332,6 +332,29 @@ span{
 
 
 @media screen and (min-width: 600px)  {
+
+  #homeContainer{
+    display: grid;
+    grid-template-areas: 
+    "header" "picture"
+    "desc" "picture"!important;
+  }
+
+  .header{
+    grid-area: header;
+  }
+
+  .picture{
+    grid-area: picture;
+  }
+
+  .desc{
+    grid-area: desc;
+  }
+
+
+
+
   #homeContainer #homePage h3{
     font-size: 2.8em;
   }
