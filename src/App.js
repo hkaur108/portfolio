@@ -11,8 +11,7 @@ import {Routes,Route} from "react-router-dom";
 export default function App() {
   return (
     <div>
-
-     
+      <div className="snowFlakes">snow flakes</div>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>

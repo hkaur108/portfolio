@@ -8,8 +8,7 @@ import '../App.css';
 export default function Skills() {
   return (
     <div>
-      <div className="container mt-5 mx-auto" id='skillsContainer'>
-        
+      <div className="container mt-5 mx-auto mb-5" id='skillsContainer'>
         <div className="row">
           <div className="col">
             <Navbar/>
@@ -37,30 +36,30 @@ export default function Skills() {
             <strong>Bootstrap</strong>
           </div>
           <div className="col-lg-4 col-md-3 col-sm-12">
-            <strong>React</strong>
+            <strong>React & Redux</strong>
           </div>
           <div className="col-lg-4 col-md-3 col-sm-12">
-            <strong>RWD</strong>
+            <strong>Responsive Web Design</strong>
           </div>
         </div>
         <div className="row text-center mx-auto">
           <div className="col-lg-4 col-md-3 col-sm-12">
-            <strong>JQuery</strong>
+            <strong>JQuery & SVG</strong>
           </div>
           <div className="col-lg-4 col-md-3 col-sm-12">
-            <strong>Git</strong>
+            <strong>Git & GitHub</strong>
           </div>
            <div className="col-lg-4 col-md-3 col-sm-12">
-            <strong>SVG</strong>
+            <strong>TypeScript</strong>
           </div>
         </div>
   
-        <div className="row">
-          <div className="col">
+        <div className="row mx-auto">
+          <div className="col py-3">
             <h6 className='text-center' style={{color:"#19A7CE"}}>📜 Professional Development</h6>
           </div>
         </div>
-        <div className="row ">
+        <div className="row mx-auto">
           <div className="col">
             <div className="col">
               <p>The Complete 2024 Web Development Bootcamp -- Udemy</p>

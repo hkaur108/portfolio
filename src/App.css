@@ -14,6 +14,7 @@
 
 
 :root{
+  --mainBlue:#19a7ce;
   --mainBackground:#240A34;
   --mainColor:#F7F7F7;
   --paraGraphColor:rgba(108,117,125,1)
@@ -23,60 +24,38 @@
 
 
 html,body{
-  width:80%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
   max-width:80%;
   font-family:sans-serif;
-  margin:auto;
+  margin: auto;
   background-color: var(--mainBackground);
   color:var(--mainColor)!important;
   font-size: 16px;
-
+  position:relative;
 }
+
 
 
 /* Global Stylings */
-h1,h2,h3,h4,h5,h6{
-  color:var(--mainColor);
-  letter-spacing: 0.05em;
-}
+h1,h2,h3,h4,h5,h6{letter-spacing: 0.05em;}
+h1 span.customColor{color:var(--mainBlue)!important;}
 
-h1{
-  font-size: 2em;
+em{color:var(--mainBlue)!important;}
 
-}
+h1{font-size: 2em;}
 
-h2{
-    font-size: 1.8em;
+h2{font-size: 1.8em;}
 
+h3{font-size: 1.5em;}
 
-}
+h4{font-size: 1.3em;}
 
-h3{
+h5{font-size: 1.2em;}
 
-      font-size: 1.5em;
-
-
-}
-
-h4{
-
-        font-size: 1.3em;
-        
-
-
-}
-
-h5{
-          font-size: 1.2em;
-
-
-}
-
-h6{
-          font-size: 1em;
-
-
-}
+h6{font-size: 1em;}
 
 p{
   font-size: 1em;
@@ -101,9 +80,35 @@ h6:hover{
 span{
   color:#fff;
 }
+.cert ~ .col-lg-4::before{
+  content:"* "
+
+}
+
+.snowFlakes{
+  position:absolute;
+  z-index: -5;
+  top:0;
+  left:0;
+  width:100px;
+  height:100px;
+  border:2px solid red;
+  animation-name:snow;
+  animation-duration: 4s;
+
+
+}
+
+@keyframes snow {
+  0%   {top: 10px; left:5px}
+  25%  {top: 20px; left:6px}
+  50%  {top: 30px; left:5px}
+  100% {top: 80px; left:9px}
+  
+}
 
 #imageContainer{
-                width:70%;
+                width:90%;
                 height:90%;
                 margin:auto;
                 background-image: url("/public/Images/profileImage/pro.jpg");
@@ -114,10 +119,12 @@ span{
                 border-radius:5%;
                 box-shadow:0px 0px 5px 5px #6c6d6d;
                 overflow:hidden;
+                transition: width 2s linear 1s;
+
 }
 
 .card{
-  transition: transform 0.5s;
+  transition: all 0.5s ease-in-out;
 
 }
 
@@ -130,6 +137,31 @@ span{
 }
 
 
+.projectViewButton{
+  background-color: #240A34;
+  width:150px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 1px 2px gray;
+  font-size: 1rem;
+}
+
+
+.card-title{
+  color:#240A34;
+  width:150px;
+  margin:5px 0 7px 0;
+  font-size: 2rem;
+}
+
+.project-image{
+  display:block;
+  width:100%;
+  height:100px;
+  margin:5px auto 5px auto;
+  object-fit: contain;
+  object-position: center;
+
+}
 @media only screen and (min-width: 1200px){
 
 /*===================== Navbar====================== */
@@ -175,16 +207,10 @@ span{
 
   }
 
-   #navContainer ul li a strong{
-
-   }
   #navContainer ul li:hover{
     /* transform: scale(0.5)!important; */
     transition:all .5s ease;
   }
-
-
-
 
 }
 
@@ -202,11 +228,11 @@ span{
 #navContainer{
   width:100%;
   margin:auto;
-    text-align: center;
+  text-align: center;
 }
 
 #navContainer nav.navbar a.navbar-brand{
-    display:none!important;
+    display:block!important;
     color: #19a7ce !important;
     font-size: 1.5em;
   }
@@ -334,6 +360,8 @@ span{
 @media screen and (min-width: 600px)  {
 
   #homeContainer{
+        margin:2em auto;
+
     display: grid;
     grid-template-areas: 
     "header" "picture"
@@ -364,6 +392,10 @@ span{
 
    #homeContainer #homePage .jumbotron .container p{
     font-size: 1em;
+   }
+
+   #imageContainer{
+    width:100%;
    }
 /*===================== Navbar====================== */
 
@@ -431,10 +463,6 @@ span{
     margin:.5em auto;
   }
 
-
-
-
-
 }
 
 
@@ -444,20 +472,28 @@ span{
 
   /*============== Home Container=================== */
   #homeContainer{
-    max-width:100%;
+    display:block;
+    width:100%;
+    height:100%;
+    max-width:450px;
     text-align: center;
-    margin:auto;
+    margin:2em 0;
+    padding:0;
+    position:relative;
+  }
+  #homeContainer h1{
+    font-size: 2em;
   }
 
 
 .navbar-toggler{
   background-color: #fff!important;
   font-size: 1em;
+  display:none;
 }
     #homePageDesc{
       order:3!important;
-
-   }
+    }
 
 
     .icons{
@@ -471,66 +507,73 @@ span{
 
 
    #imageContainer{
+     width:15em;
+    height:15em;
     order:1!important;
    }
+
+  
 /*===================== Navbar====================== */
 
-#navContainer .navbar >button >span{
-  color:#fff!important;
-
+#navContainer{
+  position:absolute;
+  bottom:-200px;
+  width:100%;
+  max-width: 350px;
+  margin:auto;
 }
 
-#navContainer nav.navbar a.navbar-brand{
-    display:block;
-    color: #19a7ce !important;
-    font-size: 1.5em;
-    padding:.5em 1em;
-    /* margin:.2em auto; */
-    /* border-bottom: none!important; */
+    #navContainer  > .navbar > .navbar-brand{
+      display:none;
 
-  }
-
-  #navContainer > button{
-    border:none;
-  }
-
-    #navContainer > button > span{
-
-      background-color: #fff;
-    }
-
-    #navContainer button:hover{
-      border:none;
-      outline:none;
     }
   #navContainer ul{
-    margin:1em 0;
+    margin:auto;
     text-align: center;
-    overflow: hidden;
     display:block;
-    padding:1em .5em;
+    padding:.5em;
     transition:all .5s ease;
+    text-align: center;
 
   }
  #navContainer ul li{
-    padding:.5em;
-    margin:0 0;
-    border-bottom: 1px solid rgba(151, 148, 148, 0.733)!important;
+    padding:.2em;
+    margin:auto;
     text-align: center;
-    overflow: hidden;
     transition:all .5s ease;
+    cursor: pointer;
+    font-size: .5em;
+    border-bottom: 1px solid gray;
 
   }
-  #navContainer ul li:hover{
+ 
+  #navContainer ul ~ li:hover{
+    cursor:pointer;
+  }
+
+  #navbarNav{
+    display:block;
+    margin:auto;
+    text-align: center;
+  }
+
+  #navbarNav .navbar-nav .nav-item{
+    cursor:pointer;
+  }
+  /* #navbarNav >ul > li:nth-child(1){
+    display:block;
+  }
+   #navbarNav >ul > li:nth-child(2){
+    display:block;
+  } */
+
+  
+    #navContainer  > #navbarNav > ul > li:hover{
     transform: scale(1.1)!important;
     transition:all .5s ease;
+    cursor:pointer;
   }
 
-  /* about Container */
-  #imageContainer{
-    width:15em;
-    height:15em;
-  }
 
 
   /*======================== skills=========================== */
@@ -538,7 +581,7 @@ span{
     display:block;
     padding:.3em 0;
     margin:.5em auto;
-    border-bottom: 1px solid grey;
+    /* border-bottom: 1px solid grey; */
   }
 
 

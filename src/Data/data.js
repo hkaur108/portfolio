@@ -12,6 +12,18 @@ export const Project=[
     gitLink:'https://hkaur108.github.io/e-commerce/'
 
   },
+  {  
+    id:17,
+    name:"Mortgage Calculator",
+    img:process.env.PUBLIC_URL +"/Images/projectImages/mortgage.png",
+    gitLink:'https://hkaur108.github.io/mortgage/'
+},
+{  
+    id:18,
+    name:"Age Calculator",
+    img:process.env.PUBLIC_URL +"/Images/projectImages/age.png",
+    gitLink:'https://hkaur108.github.io/age-calc/'
+},
     
     {  
     id:3,
@@ -109,6 +121,7 @@ export const Project=[
     img:process.env.PUBLIC_URL +"/Images/projectImages/simon.png",
     gitLink:'https://hkaur108.github.io/simon/'
 },
+
 
 
 

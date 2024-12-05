@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import '../App.css';
 
 
 
@@ -34,17 +35,13 @@ const responsive = {
 
 
 export default function Projects() {
-
-
-  
-  
   const EachProject= Project.map((item)=>{
         return(      
-            <Card key={item.id} style={{ width: '12em', height:"20em" }} className='p-3 mx-auto mx-1'>
-                  <Card.Img style={{ width: '7em' }}   variant="top" src={item.img} className='formatProjImg mt-1 mx-auto' alt={item.name}/>
+            <Card key={item.id} style={{ maxWidth: '10em', height:"100%"}} className='p-3 mx-auto mx-1 '>
+                  <Card.Img  src={item.img} className='project-image mt-3 mx-auto' alt={item.name}/>
             <Card.Body className='d-flex align-items-center justify-content-between flex-column'>
-            <Card.Title className='fs-6 fw-bold'>{item.name}</Card.Title>
-            <Button className='text-capitalize text-center text-wrap fs-6 ' size="sm" variant="primary" href={item.gitLink}>view project</Button>
+            <Card.Title className='fs-6 fw-bold card-title'>{item.name}</Card.Title>
+            <Button className='text-capitalize text-center text-wrap fs-6 projectViewButton'  href={item.gitLink}>view project</Button>
         </Card.Body>
         </Card>
         
@@ -52,30 +49,24 @@ export default function Projects() {
     })
   return (
     <div>
-      <div className="container mt-5">
-          <div className="row">
-            <div className="col">
+      <div className="container mt-5 mx-auto mb-5" style={{maxWidth:"700px"}}>
+          <div className="row mx-auto text-center justify-content-center">
+            <div className="vw-100 col-sm-12 mx-auto text-center justify-content-center ">
               <Navbar/>
             </div>
           </div>
         <div className="row p-2">
         <div className="col">
-          <h4 className='text-center fs-1'>Projects</h4>
+          <h4 className='text-center fs-2'>Projects</h4>
         </div>
         </div>
-        <div className="row">
-          <div className='container mb-5' id='projects'>
       
         <div className="row">
-          <div className="col text-center">
+          <div className="col text-center mb-5">
           <Carousel responsive={responsive}>
             {EachProject}     
         </Carousel>
           </div>
-        </div>
-        
-      </div>
-
         </div>
       </div>
     </div>

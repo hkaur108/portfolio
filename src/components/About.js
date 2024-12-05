@@ -9,7 +9,7 @@ import '../App.css';
 
 export default function About() {
   return (
-    <div class="aboutContainer">
+    <div class="aboutContainer mx-auto mb-5" style={{maxWidth:"700px"}}>
       <div className="container mt-5 py-2">
            <div className="row">
           <div className="col">
@@ -18,7 +18,7 @@ export default function About() {
         </div>
         <div className="row ">
           <div className="col">
-            <h4 className='text-center'>About</h4>
+            <h4 className='text-center fs-2'>About</h4>
           </div>
         </div>
        
@@ -40,7 +40,7 @@ export default function About() {
 
   
 
-        <div className="row">
+        <div className="row cert">
           <div className="col-lg-4 col-md-6 col-sm-12">
             <p>Creating a Responsive Web Design --Linkedin</p>
           </div>

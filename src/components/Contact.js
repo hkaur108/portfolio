@@ -8,12 +8,17 @@ import '../App.css';
 export default function Contact() {
   return (
     
-        <div className="container mt-5">
+        <div className="container mt-5" style={{maxWidth:"700px", marginBottom:"80px"}}>
 
             <div className="row">
                 <div className="col">
                     <Navbar/>    
                 </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <h2 className='text-center'>Contact Details</h2>
+              </div>
             </div>
             <div className="row">
               <div className="col ">
@@ -35,7 +40,7 @@ export default function Contact() {
               </div>
             </div>
 
-          <div className="row py-4 my-2">
+          {/* <div className="row py-4 my-2">
             <div className="col-4 d-flex align-items-center justify-content-center">
                 <a href="mailto:hkaur108@hotmail.com"><button type="button"  href="mailto:hkaur108@hotmail.com" className='btn btn-sm btn-outline-secondary fw-bold' style={{color:"#19A7CE"}}>Email</button></a>
             </div>
@@ -46,7 +51,7 @@ export default function Contact() {
               <a href="https://github.com/hkaur108?tab=repositories">
                 <button type="button" href="https://github.com/hkaur108?tab=repositories"  className='btn btn-sm btn-outline-secondary fw-bold' style={{color:"#19A7CE"}}>Github</button></a>
             </div>
-          </div>
+          </div> */}
           
         </div>
   )

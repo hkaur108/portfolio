@@ -9,34 +9,10 @@ import { useEffect } from 'react';
 
 
 export default function Navbar() {
-  const [isActive,setisActive] =useState(false)
-  const[showNav,setshowNav]= useState(false)
-
-  useEffect(()=>{
-    const collapseButton= document.querySelector(".clicked");
-    const navbarNav= document.getElementById('navbarNav')
-
-  collapseButton.addEventListener("click", ()=>{
-    if(!showNav){
-        navbarNav.style.display="block";
-        navbarNav.style.transition='all 2s ease-in';
-        setshowNav(true)
-    }
-    else{
-      setshowNav(false)
-      navbarNav.style.display="none"
-
-    }
-    
-  })
-  
-
-  },[showNav])
-
-
+  const [isActive,setisActive] =useState(false);
 
   return (
-    <div className='container' id="navContainer">
+    <div className='container mx-auto' id="navContainer">
         <nav className="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-light" >
             <a className="navbar-brand text-light" href="#"><strong>🐱 PortFolio</strong></a>
 
@@ -47,9 +23,7 @@ export default function Navbar() {
     <ul class="navbar-nav mr-auto ">
       <li class="nav-item">
         <NavLink to="/" className= {({isActive})=>
-                    (isActive ? "nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")
-     
-        }>🏠 Home</NavLink>
+                    (isActive ? "nav-link fw-bold text-info no-underline":"nav-link fw-bold text-light no-underline")} >🏠 Home</NavLink>
       </li>
       <li class="nav-item">
         <NavLink 
