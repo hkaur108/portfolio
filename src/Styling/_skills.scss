@@ -1,0 +1,28 @@
+#skillsContainer .row div.col-lg-4 strong {
+    display: block;
+}
+
+
+.about-card ul li{
+    background-color: none;
+}
+
+@mixin CommonSkillsCss{
+    letter-spacing: 3px;
+}
+
+h3{
+    @include CommonSkillsCss;
+}
+p{
+    @include CommonSkillsCss;
+}
+
+
+ul li{
+    list-style: none;
+    font-size: 1.09rem;
+    text-align: left;
+    letter-spacing: 3px;
+    padding:5px;
+}

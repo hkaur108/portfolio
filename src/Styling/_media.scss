@@ -1,0 +1,388 @@
+
+@media screen and (min-width: 600px)  {
+
+    #homeContainer{
+      margin:2em auto;
+      display: grid;
+      grid-template-areas: 
+      "header" "picture"
+      "desc" "picture"!important;
+    }
+  
+    .header{
+      grid-area: header;
+    }
+  
+    .picture{
+      grid-area: picture;
+    }
+  
+    .desc{
+      grid-area: desc;
+    }
+  
+    #homeContainer #homePage h3{
+      font-size: 2.8em;
+    }
+      #homeContainer #homePage h3 span span{
+        font-size: 1.5em;
+      }
+  
+     #homeContainer #homePage .jumbotron .container p{
+      font-size: 1em;
+     }
+  
+     #imageContainer{
+      width:100%;
+     }
+  /*===================== Navbar====================== */
+  
+  
+  #navContainer nav.navbar a.navbar-brand{
+      display: none !important;;
+      color: #19a7ce !important;
+      font-size: 1em;
+    }
+  
+    #navContainer > button{
+      background-color: #fff;
+      border:none;
+    }
+  
+  
+      #navContainer button:hover{
+        border:none;
+        outline:none;
+      }
+    #navContainer ul{
+      width:100%;
+      /* margin:1em 0; */
+      text-align: center;
+      overflow: hidden;
+    }
+   #navContainer ul li{
+      display:block;
+      text-align: center;
+      overflow: hidden;
+  
+    }
+    #navContainer ul li:hover{
+      transform: scale(1.1)!important;
+      transition:all .5s ease;
+  
+  
+    }
+       #homePageDesc{
+        display: grid, !important;
+        order:3!important;  
+  
+     }
+  
+     #imageContainer{
+      width:15em;
+      height:12em;
+     }
+  
+      .icons{
+      order:2 !important;
+      margin:auto;
+     }
+  
+     .icons a{
+      margin: auto !important;
+     }
+  
+       /*======================== skills=========================== */
+  
+  
+    #skillsContainer .row div.col-lg-4 strong{
+      display:block;
+      padding:.3em 0;
+      margin:.5em auto;
+    }
+  
+  }
+  
+  @media only screen and (min-width: 992px) {
+    
+    /*===================== Navbar====================== */
+    
+    
+    #navContainer{
+      width:100%;
+      margin:auto;
+      text-align: center;
+    }
+    
+    #navContainer nav.navbar a.navbar-brand{
+        display:block!important;
+        color: #19a7ce !important;
+        font-size: 1.5em;
+      }
+    
+        #navContainer button:hover{
+          border:none;
+          outline:none;
+        }
+      #navContainer ul{
+        width:100%;
+        text-align: center;
+        overflow: hidden;
+    
+    
+      }
+     #navContainer ul li{
+        display:block;
+        text-align: center;
+        overflow: hidden;
+    
+    
+      }
+    
+      #navContainer ul li:hover{
+        transform: scale(1.1)!important;
+        transition:all .5s ease;
+      }
+    }
+    
+    
+    
+    
+    
+    @media only screen and (min-width: 768px) {
+    
+      #homeContainer{
+        width:100%;
+        text-align: center;
+        margin: 2em auto;
+    
+      }
+    
+    /*===================== Navbar====================== */
+    
+    
+    #navContainer{
+      width:100%;
+      margin:auto;
+      text-align: center;
+    }
+    
+    #navContainer nav.navbar a.navbar-brand{
+      display:none!important;
+        color: #19a7ce !important;
+        font-size: 1.5em;
+      }
+    
+      #navContainer > button{
+        background-color: #fff;
+        border:none;
+      }
+    
+    
+        #navContainer button:hover{
+          border:none;
+          outline:none;
+        }
+      #navContainer ul{
+        width:100%;
+        margin:1em auto;
+        text-align: center;
+        overflow: hidden;
+    
+      }
+     #navContainer ul li{
+        display:block;
+        text-align: center;
+        overflow: hidden;
+      }
+    
+      #navContainer ul li:hover{
+        transform: scale(1.1)!important;
+        transition:all .5s ease;
+      }
+    
+      #homePageDesc{
+          display: grid, !important;
+          order:3!important;
+      }
+    
+       #imageContainer{
+        display: grid!important;
+        order:1!important;
+       }
+    
+         #homePageDesc{
+          display: grid, !important;
+          order:3!important;
+    
+       }
+    
+        .icons{
+        order:2 !important;
+        margin:auto;
+       }
+    
+       .icons a{
+        margin: auto !important;
+       }
+    
+    
+      #skillsContainer .row div.col-lg-4 strong{
+        display:block;
+        padding: 0;
+        margin:.5em auto;
+      }
+    }
+    
+    
+    @media screen and (max-width: 600px){
+    
+    
+    
+      /*============== Home Container=================== */
+      #homeContainer{
+        display:block;
+        width:100%;
+        max-width:450px;
+        text-align: center;
+        margin:2em 0;
+        padding:0;
+        position:relative;
+      }
+      #homeContainer h1{
+        font-size: 2em;
+      }
+    
+    
+    .navbar-toggler{
+      background-color: #fff!important;
+      font-size: 1em;
+      
+    }
+        
+      #homePageDesc{
+          order:3!important;
+        }
+    
+    
+        .icons{
+        order:2 !important;
+        margin:auto;
+       }
+    
+       .icons a{
+        margin: auto !important;
+       }
+    
+    
+       #imageContainer{
+         width:15em;
+        height:15em;
+        order:1!important;
+       }
+    
+       .navbar-toggler-icon , .navbar-toggler{
+        display: block;
+       }
+    
+       .navbar-toggler{
+        display: none;
+       }
+    /*===================== Navbar====================== */
+    
+    
+    
+    #navContainer{
+      position:absolute;
+      bottom:-180px;
+      width:100%;
+      max-width: 350px;
+      margin:auto;
+    }
+    
+        #navContainer  > .navbar > .navbar-brand{
+          display:block;
+        }
+      #navContainer ul{
+        margin:auto;
+        text-align: center;
+        display:block;
+        padding:.5em;
+        transition:all .5s ease;
+        text-align: center;
+    
+      }
+     #navContainer ul li{
+        padding:.2em;
+        margin:auto;
+        text-align: center;
+        transition:all .5s ease;
+        cursor: pointer;
+        font-size: 1em;
+        border-bottom: 1px solid gray;
+    
+      }
+     
+      #navContainer ul ~ li:hover{
+        cursor:pointer;
+      }
+    
+      #navbarNav{
+        display:block;
+        margin:auto;
+        text-align: center;
+      }
+    
+      #navbarNav .navbar-nav .nav-item{
+        cursor:pointer;
+      } 
+      /* #navbarNav >ul > li:nth-child(1){
+        display:block;
+      }
+       #navbarNav >ul > li:nth-child(2){
+        display:block;
+      } */
+    
+      
+        /* #navContainer  > #navbarNav > ul > li:hover{
+        transform: scale(1.1)!important;
+        transition:all .5s ease;
+        cursor:pointer;
+      } 
+    
+      /* =======================About============================ */
+    
+      #aboutContainer{
+        display:block;
+        width:100%;
+        height:70%;
+        max-width:500px;
+        text-align: center;
+        margin:2em 0;
+        padding:1em;
+        position:relative;
+      }
+    
+      #navContainer{
+        position:absolute;
+        bottom:-180px;
+        width:100%;
+        max-width: 300px;
+        margin:auto;
+        border:2px solid red;
+      } 
+    
+      /*======================== skills=========================== */
+      #skillsContainer .row div.col-lg-4 strong{
+        display:block;
+        padding:.3em 0;
+        margin:.5em auto;
+        /* border-bottom: 1px solid grey; */
+      }
+    
+    
+    }
+    
+    
+    
+    

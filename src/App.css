@@ -1,8 +1,535 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+/* Global Stylings */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.05em;
+}
 
-*{
-  margin:0;
-  padding:0;
+h1 span.customColor {
+  color: var(--mainBlue) !important;
+}
+
+em {
+  color: var(--mainBlue) !important;
+}
+
+p {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--paraGraphColor);
+  margin: 2em 0;
+  text-align: left;
+  padding: 0 1em;
+  margin: auto;
+}
+
+ul, li {
+  font-size: 1em;
+}
+
+h6 {
+  transition: transform 1s;
+}
+
+h6:hover {
+  transform: scaleX(1.05);
+}
+
+span {
+  color: #fff;
+}
+
+.cert ~ .col-lg-4::before {
+  content: "* ";
+}
+
+#imageContainer {
+  display: block;
+  margin: auto;
+  background-image: url("/public/Images/profileImage/pro.jpg");
+  background-position: center;
+  background-color: var(--mainBackground);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  box-shadow: 0px 0px 5px 5px #6c6d6d;
+  transition: width 2s linear 1s;
+}
+
+.card {
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: scaleY(1.06);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 10px var(#000);
+}
+
+.projectViewButton {
+  background-color: #240A34;
+  width: 150px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 1px 2px gray;
+  font-size: 1rem;
+}
+
+.card-title {
+  color: #240A34;
+  width: 150px;
+  margin: 5px 0 7px 0;
+  font-size: 2rem;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin: 5px auto 5px auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#navContainer {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+#navContainer nav.navbar a.navbar-brand {
+  display: none !important;
+  color: #19a7ce !important;
+  font-size: 1.5em;
+}
+
+#navContainer > button {
+  background-color: #fff;
+  border: none;
+}
+
+#navContainer > button > span.navbar-toggler-icon {
+  color: #19a7ce !important;
+  border: #19a7ce !important;
+  outline: #19A7CE !important;
+  transition: all 0.5s ease;
+}
+
+#navContainer button:hover {
+  border: none;
+  outline: none;
+}
+
+#navContainer ul {
+  text-align: center;
+  overflow: hidden;
+}
+
+#navContainer ul li.nav-item {
+  width: 100%;
+  padding: 0 0;
+  margin: 0 0;
+  text-align: center;
+  overflow: hidden;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 2px;
+}
+
+#navContainer ul li:hover {
+  /* transform: scale(0.5)!important; */
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 600px) {
+  #homeContainer {
+    margin: 2em auto;
+    display: grid;
+    grid-template-areas: "header" "picture" "desc" "picture" !important;
+  }
+  .header {
+    grid-area: header;
+  }
+  .picture {
+    grid-area: picture;
+  }
+  .desc {
+    grid-area: desc;
+  }
+  #homeContainer #homePage h3 {
+    font-size: 2.8em;
+  }
+  #homeContainer #homePage h3 span span {
+    font-size: 1.5em;
+  }
+  #homeContainer #homePage .jumbotron .container p {
+    font-size: 1em;
+  }
+  #imageContainer {
+    width: 100%;
+  }
+  /*===================== Navbar====================== */
+  #navContainer nav.navbar a.navbar-brand {
+    display: none !important;
+    color: #19a7ce !important;
+    font-size: 1em;
+  }
+  #navContainer > button {
+    background-color: #fff;
+    border: none;
+  }
+  #navContainer button:hover {
+    border: none;
+    outline: none;
+  }
+  #navContainer ul {
+    width: 100%;
+    /* margin:1em 0; */
+    text-align: center;
+    overflow: hidden;
+  }
+  #navContainer ul li {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+  }
+  #navContainer ul li:hover {
+    transform: scale(1.1) !important;
+    transition: all 0.5s ease;
+  }
+  #homePageDesc {
+    display: grid, !important;
+    order: 3 !important;
+  }
+  #imageContainer {
+    width: 15em;
+    height: 12em;
+  }
+  .icons {
+    order: 2 !important;
+    margin: auto;
+  }
+  .icons a {
+    margin: auto !important;
+  }
+  /*======================== skills=========================== */
+  #skillsContainer .row div.col-lg-4 strong {
+    display: block;
+    padding: 0.3em 0;
+    margin: 0.5em auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /*===================== Navbar====================== */
+  #navContainer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  #navContainer nav.navbar a.navbar-brand {
+    display: block !important;
+    color: #19a7ce !important;
+    font-size: 1.5em;
+  }
+  #navContainer button:hover {
+    border: none;
+    outline: none;
+  }
+  #navContainer ul {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+  #navContainer ul li {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+  }
+  #navContainer ul li:hover {
+    transform: scale(1.1) !important;
+    transition: all 0.5s ease;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #homeContainer {
+    width: 100%;
+    text-align: center;
+    margin: 2em auto;
+  }
+  /*===================== Navbar====================== */
+  #navContainer {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  #navContainer nav.navbar a.navbar-brand {
+    display: none !important;
+    color: #19a7ce !important;
+    font-size: 1.5em;
+  }
+  #navContainer > button {
+    background-color: #fff;
+    border: none;
+  }
+  #navContainer button:hover {
+    border: none;
+    outline: none;
+  }
+  #navContainer ul {
+    width: 100%;
+    margin: 1em auto;
+    text-align: center;
+    overflow: hidden;
+  }
+  #navContainer ul li {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+  }
+  #navContainer ul li:hover {
+    transform: scale(1.1) !important;
+    transition: all 0.5s ease;
+  }
+  #homePageDesc {
+    display: grid, !important;
+    order: 3 !important;
+  }
+  #imageContainer {
+    display: grid !important;
+    order: 1 !important;
+  }
+  #homePageDesc {
+    display: grid, !important;
+    order: 3 !important;
+  }
+  .icons {
+    order: 2 !important;
+    margin: auto;
+  }
+  .icons a {
+    margin: auto !important;
+  }
+  #skillsContainer .row div.col-lg-4 strong {
+    display: block;
+    padding: 0;
+    margin: 0.5em auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  /*============== Home Container=================== */
+  #homeContainer {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    margin: 2em 0;
+    padding: 0;
+    position: relative;
+  }
+  #homeContainer h1 {
+    font-size: 2em;
+  }
+  .navbar-toggler {
+    background-color: #fff !important;
+    font-size: 1em;
+  }
+  #homePageDesc {
+    order: 3 !important;
+  }
+  .icons {
+    order: 2 !important;
+    margin: auto;
+  }
+  .icons a {
+    margin: auto !important;
+  }
+  #imageContainer {
+    width: 15em;
+    height: 15em;
+    order: 1 !important;
+  }
+  .navbar-toggler-icon, .navbar-toggler {
+    display: block;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  /*===================== Navbar====================== */
+  #navContainer {
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+  }
+  #navContainer > .navbar > .navbar-brand {
+    display: block;
+  }
+  #navContainer ul {
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding: 0.5em;
+    transition: all 0.5s ease;
+    text-align: center;
+  }
+  #navContainer ul li {
+    padding: 0.2em;
+    margin: auto;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 1em;
+    border-bottom: 1px solid gray;
+  }
+  #navContainer ul ~ li:hover {
+    cursor: pointer;
+  }
+  #navbarNav {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  #navbarNav .navbar-nav .nav-item {
+    cursor: pointer;
+  }
+  /* #navbarNav >ul > li:nth-child(1){
+    display:block;
+  }
+   #navbarNav >ul > li:nth-child(2){
+    display:block;
+  } */
+  /* #navContainer  > #navbarNav > ul > li:hover{
+    transform: scale(1.1)!important;
+    transition:all .5s ease;
+    cursor:pointer;
+  } 
+
+  /* =======================About============================ */
+  #aboutContainer {
+    display: block;
+    width: 100%;
+    height: 70%;
+    max-width: 500px;
+    text-align: center;
+    margin: 2em 0;
+    padding: 1em;
+    position: relative;
+  }
+  #navContainer {
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    border: 2px solid red;
+  }
+  /*======================== skills=========================== */
+  #skillsContainer .row div.col-lg-4 strong {
+    display: block;
+    padding: 0.3em 0;
+    margin: 0.5em auto;
+    /* border-bottom: 1px solid grey; */
+  }
+}
+#homeContainer #homePage h3 {
+  font-size: 2.8em;
+}
+
+#homeContainer #homePage .jumbotron .container p {
+  font-size: 1em;
+}
+
+.customColor {
+  color: #19a7ce;
+}
+
+.heading {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: #19a7ce;
+  font-weight: bold;
+}
+
+.name {
+  color: #19a7ce;
+}
+
+.about-card {
+  display: block;
+  width: auto;
+  height: 180px;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1em auto;
+  box-shadow: 0px 0px 5px 2px gray;
+  background-color: #544B72;
+}
+
+#skillsContainer .row div.col-lg-4 strong {
+  display: block;
+}
+
+.about-card ul li {
+  background-color: none;
+}
+
+h3 {
+  letter-spacing: 3px;
+}
+
+p {
+  letter-spacing: 3px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1.09rem;
+  text-align: left;
+  letter-spacing: 3px;
+  padding: 5px;
+}
+
+.card-carousel {
+  width: 100%;
+  height: 50vh;
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: #544B72;
+}
+
+.projectViewButton {
+  background-color: #240A34;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px 2px gray;
+  font-size: 1rem;
+}
+
+.card-title {
+  color: #240A34;
+  width: 150px;
+  margin: 5px 0 8px 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin: 5px auto 5px auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,554 +539,26 @@
   font-style: normal;
 }
 
-
-:root{
-  --mainBlue:#19a7ce;
-  --mainBackground:#240A34;
-  --mainColor:#F7F7F7;
-  --paraGraphColor:rgba(108,117,125,1)
-
-}
-
-
-
-html,body{
-  display:flex;
+html, body {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width:100%;
-  max-width:80%;
-  font-family:sans-serif;
-  margin: auto;
-  background-color: var(--mainBackground);
-  color:var(--mainColor)!important;
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  background: linear-gradient(180deg, #240A34, rgb(90, 5, 90));
+  color: #F7F7F7 !important;
   font-size: 16px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-
-
-/* Global Stylings */
-h1,h2,h3,h4,h5,h6{letter-spacing: 0.05em;}
-h1 span.customColor{color:var(--mainBlue)!important;}
-
-em{color:var(--mainBlue)!important;}
-
-h1{font-size: 2em;}
-
-h2{font-size: 1.8em;}
-
-h3{font-size: 1.5em;}
-
-h4{font-size: 1.3em;}
-
-h5{font-size: 1.2em;}
-
-h6{font-size: 1em;}
-
-p{
-  font-size: 1em;
-  letter-spacing: 0.04em;
-  color:var(--paraGraphColor);
-}
-
-
-ul, li{
-  font-size: 1em;
-}
-
-h6{
-    transition: transform 1s;
-
-}
-h6:hover{
-  transform: scaleX(1.05);
-
-}
-
-span{
-  color:#fff;
-}
-.cert ~ .col-lg-4::before{
-  content:"* "
-
-}
-
-
-
-#imageContainer{
-                width:90%;
-                height:90%;
-                margin:auto;
-                background-image: url("/public/Images/profileImage/pro.jpg");
-                background-position: center;
-                background-color: var(--mainBackground);
-                background-size:100%;
-                background-repeat:no-repeat;
-                border-radius:5%;
-                box-shadow:0px 0px 5px 5px #6c6d6d;
-                overflow:hidden;
-                transition: width 2s linear 1s;
-
-}
-
-.card{
-  transition: all 0.5s ease-in-out;
-
-}
-
-.card:hover{
-    transform: scaleY(1.06);
-    cursor: pointer;
-    box-shadow: 0px 0px 5px 10px var(#000);
-
-
-}
-
-
-.projectViewButton{
-  background-color: #240A34;
-  width:150px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 1px 2px gray;
-  font-size: 1rem;
-}
-
-
-.card-title{
-  color:#240A34;
-  width:150px;
-  margin:5px 0 7px 0;
-  font-size: 2rem;
-}
-
-.project-image{
-  display:block;
-  width:100%;
-  height:100px;
-  margin:5px auto 5px auto;
-  object-fit: contain;
-  object-position: center;
-
-}
-@media only screen and (min-width: 1200px){
-
-/*===================== Navbar====================== */
-
-
-#navContainer{
-  margin:auto;
-  text-align: center;
-}
-
-#navContainer nav.navbar a.navbar-brand{
-    display:none!important;
-    color: #19a7ce !important;
-    font-size: 1.5em;
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
   }
-
-  #navContainer > button{
-    background-color: #fff;
-    border:none;
+  100% {
+    opacity: 1;
   }
-
-    #navContainer > button > span.navbar-toggler-icon{
-      color: #19a7ce !important;
-      border: #19a7ce !important;
-      outline: #19A7CE!important;
-    }
-
-    #navContainer button:hover{
-      border:none;
-      outline:none;
-    }
-  #navContainer ul{
-    text-align: center;
-    overflow: hidden;
-
-  }
- #navContainer ul li.nav-item{
-  width:100%;
-    padding:0 0;
-    margin:0 0;
-    text-align: center;
-    overflow: hidden;
-
-  }
-
-  #navContainer ul li:hover{
-    /* transform: scale(0.5)!important; */
-    transition:all .5s ease;
-  }
-
-}
-
-@media only screen and (min-width: 992px) {
-    #homeContainer #homePage h3{
-    font-size: 2.8em;
-  }
-
-   #homeContainer #homePage .jumbotron .container p{
-    font-size: 1em;
-   }
-/*===================== Navbar====================== */
-
-
-#navContainer{
-  width:100%;
-  margin:auto;
-  text-align: center;
-}
-
-#navContainer nav.navbar a.navbar-brand{
-    display:block!important;
-    color: #19a7ce !important;
-    font-size: 1.5em;
-  }
-
-    #navContainer button:hover{
-      border:none;
-      outline:none;
-    }
-  #navContainer ul{
-    width:100%;
-    text-align: center;
-    overflow: hidden;
-
-
-  }
- #navContainer ul li{
-    display:block;
-    text-align: center;
-    overflow: hidden;
-
-
-  }
-
-  #navContainer ul li:hover{
-    transform: scale(1.1)!important;
-    transition:all .5s ease;
-  }
-}
-
-
-
-
-
-@media only screen and (min-width: 768px) {
-
-  #homeContainer{
-    width:100%;
-    text-align: center;
-    margin: 2em auto;
-
-  }
-
-/*===================== Navbar====================== */
-
-
-#navContainer{
-  width:100%;
-  margin:auto;
-  text-align: center;
-}
-
-#navContainer nav.navbar a.navbar-brand{
-  display:none!important;
-    color: #19a7ce !important;
-    font-size: 1.5em;
-  }
-
-  #navContainer > button{
-    background-color: #fff;
-    border:none;
-  }
-
-
-    #navContainer button:hover{
-      border:none;
-      outline:none;
-    }
-  #navContainer ul{
-    width:100%;
-    margin:1em auto;
-    text-align: center;
-    overflow: hidden;
-
-  }
- #navContainer ul li{
-    display:block;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  #navContainer ul li:hover{
-    transform: scale(1.1)!important;
-    transition:all .5s ease;
-  }
-
-  #homePageDesc{
-      display: grid, !important;
-      order:3!important;
-  }
-
-   #imageContainer{
-    display: grid!important;
-    order:1!important;
-   }
-
-     #homePageDesc{
-      display: grid, !important;
-      order:3!important;
-
-   }
-
-    .icons{
-    order:2 !important;
-    margin:auto;
-   }
-
-   .icons a{
-    margin: auto !important;
-   }
-
-
-  #skillsContainer .row div.col-lg-4 strong{
-    display:block;
-    padding: 0;
-    margin:.5em auto;
-  }
-}
-
-
-@media screen and (min-width: 600px)  {
-
-  #homeContainer{
-        margin:2em auto;
-
-    display: grid;
-    grid-template-areas: 
-    "header" "picture"
-    "desc" "picture"!important;
-  }
-
-  .header{
-    grid-area: header;
-  }
-
-  .picture{
-    grid-area: picture;
-  }
-
-  .desc{
-    grid-area: desc;
-  }
-
-
-
-
-  #homeContainer #homePage h3{
-    font-size: 2.8em;
-  }
-    #homeContainer #homePage h3 span span{
-      font-size: 1.5em;
-    }
-
-   #homeContainer #homePage .jumbotron .container p{
-    font-size: 1em;
-   }
-
-   #imageContainer{
-    width:100%;
-   }
-/*===================== Navbar====================== */
-
-
-#navContainer nav.navbar a.navbar-brand{
-    display: none !important;;
-    color: #19a7ce !important;
-    font-size: 1em;
-  }
-
-  #navContainer > button{
-    background-color: #fff;
-    border:none;
-  }
-
-
-    #navContainer button:hover{
-      border:none;
-      outline:none;
-    }
-  #navContainer ul{
-    width:100%;
-    /* margin:1em 0; */
-    text-align: center;
-    overflow: hidden;
-  }
- #navContainer ul li{
-    display:block;
-    text-align: center;
-    overflow: hidden;
-
-  }
-  #navContainer ul li:hover{
-    transform: scale(1.1)!important;
-    transition:all .5s ease;
-
-
-  }
-     #homePageDesc{
-      display: grid, !important;
-      order:3!important;  
-
-   }
-
-   #imageContainer{
-    width:15em;
-    height:12em;
-   }
-
-    .icons{
-    order:2 !important;
-    margin:auto;
-   }
-
-   .icons a{
-    margin: auto !important;
-   }
-
-     /*======================== skills=========================== */
-
-
-  #skillsContainer .row div.col-lg-4 strong{
-    display:block;
-    padding:.3em 0;
-    margin:.5em auto;
-  }
-
-}
-
-
-@media screen and (max-width: 600px){
-
-
-
-  /*============== Home Container=================== */
-  #homeContainer{
-    display:block;
-    width:100%;
-    height:100%;
-    max-width:450px;
-    text-align: center;
-    margin:2em 0;
-    padding:0;
-    position:relative;
-  }
-  #homeContainer h1{
-    font-size: 2em;
-  }
-
-
-.navbar-toggler{
-  background-color: #fff!important;
-  font-size: 1em;
-  display:none;
-}
-    #homePageDesc{
-      order:3!important;
-    }
-
-
-    .icons{
-    order:2 !important;
-    margin:auto;
-   }
-
-   .icons a{
-    margin: auto !important;
-   }
-
-
-   #imageContainer{
-     width:15em;
-    height:15em;
-    order:1!important;
-   }
-
-  
-/*===================== Navbar====================== */
-
-#navContainer{
-  position:absolute;
-  bottom:-200px;
-  width:100%;
-  max-width: 350px;
-  margin:auto;
-}
-
-    #navContainer  > .navbar > .navbar-brand{
-      display:none;
-
-    }
-  #navContainer ul{
-    margin:auto;
-    text-align: center;
-    display:block;
-    padding:.5em;
-    transition:all .5s ease;
-    text-align: center;
-
-  }
- #navContainer ul li{
-    padding:.2em;
-    margin:auto;
-    text-align: center;
-    transition:all .5s ease;
-    cursor: pointer;
-    font-size: .5em;
-    border-bottom: 1px solid gray;
-
-  }
- 
-  #navContainer ul ~ li:hover{
-    cursor:pointer;
-  }
-
-  #navbarNav{
-    display:block;
-    margin:auto;
-    text-align: center;
-  }
-
-  #navbarNav .navbar-nav .nav-item{
-    cursor:pointer;
-  }
-  /* #navbarNav >ul > li:nth-child(1){
-    display:block;
-  }
-   #navbarNav >ul > li:nth-child(2){
-    display:block;
-  } */
-
-  
-    #navContainer  > #navbarNav > ul > li:hover{
-    transform: scale(1.1)!important;
-    transition:all .5s ease;
-    cursor:pointer;
-  }
-
-
-
-  /*======================== skills=========================== */
-  #skillsContainer .row div.col-lg-4 strong{
-    display:block;
-    padding:.3em 0;
-    margin:.5em auto;
-    /* border-bottom: 1px solid grey; */
-  }
-
-
-}
-
-
-
+}/*# sourceMappingURL=App.css.map */

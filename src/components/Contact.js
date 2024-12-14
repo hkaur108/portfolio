@@ -10,7 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 export default function Contact() {
   return (
     
-        <div className="container mt-5" style={{maxWidth:"700px", marginBottom:"80px"}}>
+        <div className="container" >
 
             <div className="row">
                 <div className="col">
@@ -19,33 +19,33 @@ export default function Contact() {
             </div>
             <div className="row">
               <div className="col">
-                <h2 className='text-center'>Contact Details</h2>
+                <h2 className='text-center heading'>Contact Details</h2>
               </div>
             </div>
             <div className="row">
-              <div className="col ">
-                <p className='text-center py-2 mt-4'>You can contact me using the email address or you can simply click on the following links.</p>
+              <div className="col">
+                <p className='text-center py-2 my-4'>You can contact me using the email address or you can simply click on the following links.</p>
               </div>
             </div>
             <div className="row">
               <div className="col-lg-3 col-md-3 col-sm">
                 <h6 className='text-center' style={{color:"#19A7CE"}}>
-                 <a href="mailto:hkaur108@hotmail.com" className='text-decoration-none'><EmailIcon/> Email</a>
+                 <a href="mailto:hkaur108@hotmail.com" className='text-decoration-none heading'><EmailIcon/> Email</a>
                 </h6>
               </div>
               <div className="col-lg-3 col-md-3 col-sm">
                  <h6 className='text-center' style={{color:"#19A7CE"}}>
-                 <span className='text-light'></span> <a href="https://www.linkedin.com/in/harpreet-kaur-7544a0300/" className='text-decoration-none'><LinkedInIcon/> LinkedIn</a>
+                 <span className='text-light'></span> <a href="https://www.linkedin.com/in/harpreet-kaur-7544a0300/" className='text-decoration-none heading'><LinkedInIcon/> LinkedIn</a>
                 </h6>
               </div>
               <div className="col-lg-3 col-md-3 col-sm">
                  <h6 className='text-center' style={{color:"#19A7CE"}}>
-                 <span className='text-light'></span> <a href="https://github.com/hkaur108?tab=repositories" className='text-decoration-none'><GitHubIcon/>  Github</a>
+                 <span className='text-light'></span> <a href="https://github.com/hkaur108?tab=repositories" className='text-decoration-none heading'><GitHubIcon/>  Github</a>
                 </h6>
               </div>
               <div className="col-lg-3 col-md-3 col-sm">
                  <h6 className='text-center' style={{color:"#19A7CE"}}>
-                 <span className='text-light'></span> <a href="https://www.frontendmentor.io/home" className='text-decoration-none'>FrontEnd Mentor</a>
+                 <span className='text-light'></span> <a href="https://www.frontendmentor.io/home" className='text-decoration-none heading'>FrontEnd Mentor</a>
                 </h6>
               </div>
             </div>

@@ -9,7 +9,7 @@ import '../App.css';
 
 export default function About() {
   return (
-    <div class="aboutContainer mx-auto mb-5" style={{maxWidth:"700px"}}>
+    <div class="aboutContainer" >
       <div className="container mt-5 py-2">
            <div className="row">
           <div className="col">
@@ -18,41 +18,36 @@ export default function About() {
         </div>
         <div className="row ">
           <div className="col">
-            <h4 className='text-center fs-2'>About</h4>
+            <h4 className='text-center fs-2 heading'>About</h4>
           </div>
         </div>
-       
-        <div className="row text-center">
-                  <div class="col-sm-12 col-md-6 col-lg-4 text-center"><p><span className='me-2'><SchoolIcon/></span> <strong>Education:</strong> Bachelors in Computer Application from Delhi, India. P.G. diploma in Cyber Security from Lambton College in Mississauga.</p></div>
-                  <div class="col-sm-12 col-md-6 col-lg-4"><p><span className='me-2'><BallotIcon/></span> <strong>Experience:</strong> Technical support associate with Bell Canada as my Former Employer.</p></div>
-                  <div class="col-sm-12 col-md-6 col-lg-4"><p> <span className='me-2'><CasinoIcon/></span> <strong>Hobbies:</strong> Reading books and playing chess.</p></div>
+        <div className="row ">
+          <div class="col-sm-12 col-md-6 col-lg-4"><p className="about-card"><span className='me-2'><SchoolIcon/></span> <strong className='name'>Education:</strong><br/> Bachelors in Computer Application.<br/> P.G. diploma in Cyber Security. </p></div>
+          <div class="col-sm-12 col-md-6 col-lg-4"><p className="about-card"><span className='me-2'><BallotIcon/></span> <strong className='name'>Experience:</strong><br/>  Technical support associate with Bell Canada as my Former Employer.</p></div>
+          <div class="col-sm-12 col-md-6 col-lg-4"><p className="about-card"> <span className='me-2'><CasinoIcon/></span> <strong className='name'>Hobbies:</strong><br/>  Reading books and playing chess.</p></div>
         </div>
       </div>
 
       <div className="container">
         <div className="row">
           <div className="col text-center">
-            <h4>Certifications/Licences</h4>
+            <h4 className='heading'>Certifications/Licences</h4>
+            <p className='text-left px-0'>I gained the following Certifications from various resources such as Udemy and FreeCodeCamp to build my skills.</p>
           </div>
         </div>
 
+        <div className="row">
+          <div className="col-lg-4 col-md-4 col-sm-12 ">
+            <p className="about-card">Creating a Responsive Web Design --<span className='name fst-italic fw-bold'>LinkedIn</span>, <br/> Responsive Web Design -- <span className='name fst-italic fw-bold'>FreeCodeCamp</span> </p>
 
-
-  
-
-        <div className="row cert">
-          <div className="col-lg-4 col-md-6 col-sm-12">
-            <p>Creating a Responsive Web Design --Linkedin</p>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
-            <p>Creating a Responsive Web Design: Advanced Techniques --Linkedin</p>
+          <div className="col-lg-4 col-md-4 col-sm-12">
+            <p className="about-card">Creating a Responsive Web Design: Advanced Techniques -- <span className='name fst-italic fw-bold'>LinkedIn</span></p>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
-            <p>React creating and hosting full stack site --Linkedin</p>
+          <div className="col-lg-4 col-md-4 col-sm-12">
+            <p className="about-card">React creating and hosting full stack site -- <span className='name fst-italic fw-bold'>LinkedIn</span></p>
           </div>
-           <div className="col-lg-4 col-md-6 col-sm-12">
-            <p>Responsive Web Design --FreeCodeCamp</p>
-          </div>
+          
         </div>
       </div>
 
