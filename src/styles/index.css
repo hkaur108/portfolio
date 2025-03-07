@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ponomar&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  display: block;
+  font-family: "Ponomar", system-ui;
+  color: #F7F7F7 !important;
+  background-color: linear-gradient(180deg, #451952, #3C0753) !important;
+  font-size: 16px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+h1 span.customColor {
+  color: var(--mainBlue) !important;
+}
+
+em {
+  color: var(--mainBlue) !important;
+}
+
+p {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--paraGraphColor);
+  margin: 2em 0;
+  text-align: left;
+  padding: 0 1em;
+  margin: auto;
+}
+
+ul, li {
+  font-size: 1em;
+}
+
+h6 {
+  transition: transform 1s;
+}
+
+h6:hover {
+  transform: scaleX(1.05);
+}
+
+span {
+  color: #fff;
+}
+
+#imageContainer {
+  position: absolute;
+  right: 350px;
+  border-radius: 10px;
+  animation: movePicture;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movePicture {
+  0% {
+    right: 320px;
+  }
+  100% {
+    right: 150px;
+  }
+}
+.name {
+  color: #19a7ce;
+}
+
+#navbarNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar-nav {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hero-section {
+  min-height: 100vh !important;
+  margin: 3rem auto;
+}
+.hero-section .header {
+  font-size: 5rem;
+  padding: 1rem 1.5rem;
+}
+.hero-section .desc {
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.about-card {
+  display: block;
+  width: auto;
+  height: 180px;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1em auto;
+  box-shadow: 0px 0px 5px 2px gray;
+  background-color: #544B72;
+}
+
+.card {
+  width: 240px !important;
+  height: 100% !important;
+  background-color: #712B75 !important;
+  transition: all 0.5s ease-in-out;
+  padding: 0 !important;
+  border-radius: 20px !important;
+  color: #EBD3F8 !important;
+  border-top: 10px solid #4477CE !important;
+  box-shadow: 0px 0px 2px 10px #240A34;
+}
+.card .card-title {
+  width: 100%;
+  font-size: 1.1rem !important;
+  font-weight: 900;
+  color: #F39F5A;
+}
+.card .project-description {
+  font-size: 0.6rem;
+  margin: 0.3rem auto;
+}
+.card .image-section {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+}
+.card .image-section img {
+  width: 100%;
+  height: 100%;
+}
+.card:hover {
+  transform: scaleY(1.06);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 10px var(#000);
+}
+
+.projectViewButton {
+  background-color: #240A34;
+  width: 100% !important;
+  border-radius: 20px;
+  box-shadow: 0px 0px 1px 2px gray;
+  font-size: 1rem;
+  margin: 0.3rem auto;
+}
+.projectViewButton:hover {
+  background-color: #F39F5A !important;
+  transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-section .name-header {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .home-section .name-header {
+    font-size: 2.5rem;
+  }
+  .home-section .desc {
+    font-size: 1rem;
+  }
+  .home-section .icons {
+    padding-left: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 750px !important;
+  }
+  .home-section .name-header {
+    font-size: 3.5rem;
+  }
+  .home-section .icons {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+  }
+  .home-section #imageContainer {
+    position: static;
+    margin: auto;
+  }
+  .home-section #imageContainer {
+    display: block;
+    height: 300px !important;
+  }
+  .home-section #imageContainer img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  /*============== Home Container=================== */
+  .hero-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    position: relative;
+    min-height: 100%;
+  }
+  #homeContainer h1 {
+    font-size: 2em;
+  }
+  .navbar-toggler {
+    background-color: #fff !important;
+    font-size: 1em;
+  }
+  .navbar-nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    transition: all 0.3s ease-in;
+    background-color: #640D6B;
+  }
+  .navbar-brand {
+    display: none;
+  }
+  .icons {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+  }
+  .desc {
+    text-align: center;
+  }
+  .icons {
+    margin: auto !important;
+  }
+  #imageContainer {
+    width: 100%;
+    display: block;
+    position: static;
+    margin: auto;
+    margin-top: 0 !important;
+    background-color: #451952 !important;
+    border-radius: 20px;
+  }
+  #imageContainer img {
+    display: block;
+    margin: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+  }
+  .navbar-toggler-icon, .navbar-toggler {
+    display: none;
+  }
+  .navbar-toggler {
+    display: none;
+    background-color: #19a7ce !important;
+  }
+  .header {
+    text-align: center;
+  }
+  .header .name-header {
+    font-size: 3.5rem;
+  }
+  .my-work {
+    font-size: 2.8rem !important;
+    font-weight: 700;
+  }
+  .about-card {
+    display: block;
+    width: auto;
+    height: 180px;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em auto;
+    box-shadow: 0px 0px 5px 2px gray;
+    background-color: #544B72;
+  }
+} 
+.ponomar-regular {
+  font-family: "Ponomar", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}/*# sourceMappingURL=index.css.map */

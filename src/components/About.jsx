@@ -16,12 +16,12 @@ export default function About() {
             <Navbar/>
           </div>
         </div>
-        <div className="row ">
+        <div className="row">
           <div className="col">
-            <h4 className='text-center fs-2 heading'>About</h4>
+            <h4 className='text-center fs-2 heading name fw-bold'>About</h4>
           </div>
         </div>
-        <div className="row ">
+        <div className="row">
           <div class="col-sm-12 col-md-6 col-lg-4"><p className="about-card"><span className='me-2'><SchoolIcon/></span> <strong className='name'>Education:</strong><br/> Bachelors in Computer Application.<br/> P.G. diploma in Cyber Security. </p></div>
           <div class="col-sm-12 col-md-6 col-lg-4"><p className="about-card"><span className='me-2'><BallotIcon/></span> <strong className='name'>Experience:</strong><br/>  Technical support associate with Bell Canada as my Former Employer.</p></div>
           <div class="col-sm-12 col-md-6 col-lg-4"><p className="about-card"> <span className='me-2'><CasinoIcon/></span> <strong className='name'>Hobbies:</strong><br/>  Reading books and playing chess.</p></div>
@@ -31,7 +31,7 @@ export default function About() {
       <div className="container">
         <div className="row">
           <div className="col text-center">
-            <h4 className='heading'>Certifications/Licences</h4>
+            <h4 className='name fw-bold'>Certifications/Licences</h4>
             <p className='text-left px-0'>I gained the following Certifications from various resources such as Udemy and FreeCodeCamp to build my skills.</p>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function About() {
         </div>
       </div>
 
-     
+     <div className='w-100 mb-5' style={{height:"100px"}}></div>
     </div>
   )
 }
